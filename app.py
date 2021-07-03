@@ -21,16 +21,10 @@ bucket_name = 'retraction-check'
 object_key = 'sample_literature_retraction.bib'
 retracted_obj = client.get_object(Bucket=bucket_name, Key=object_key)
 retracted_literature = retracted_obj['Body']
-# retracted_literature = retracted_literature.read().decode('utf-8')
-# retracted_literature = io.StringIO(retracted_literature)
-# retracted_literature.seek(0)
 
 object_key = 'sample_literature.bib'
 unretracted_obj = client.get_object(Bucket=bucket_name, Key=object_key)
 unretracted_literature = unretracted_obj['Body']
-# unretracted_literature = unretracted_literature.read().decode('utf-8')
-# unretracted_literature = io.StringIO(unretracted_literature)
-# unretracted_literature.seek(0)
 
 object_key = 'sample_database_cleaned.csv'
 sample_database_obj = client.get_object(Bucket=bucket_name, Key=object_key)
@@ -146,7 +140,7 @@ components.html(
 
 # file selector for uploading bibliography
 st.header("Test with your own .bib file!")
-upload = st.file_uploader("Upload a bib file", type=["txt","bib"])
+upload = st.file_uploader("Upload a bib file", type=["bib"])
 if upload != None:
     # st.text(bib_file.read())
     st.text("Upload successful!")
