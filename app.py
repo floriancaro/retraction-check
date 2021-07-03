@@ -86,16 +86,10 @@ retracted_dict = { key : "retracted" for key in [re.sub(".*, ", "", i).strip() f
 local_css("style.css")
 
 # Header
-components.html(
-    """
-    <div>
-        <h1 style="color: white; text-align: center">Retraction Check</h1>
-
-    </div>
-    """,
-)
-
-st.markdown('<h2 style="font-size: 1.5em; color: white; text-align: center">Check whether your references contain retracted papers</h2>', unsafe_allow_html=True)
+st.markdown('''
+<h1 style="color: white; text-align: center">Retraction Check</h1>
+<h2 style="font-size: 1.5em; color: white; text-align: center">Check whether your references contain retracted papers</h2>
+''', unsafe_allow_html=True)
 
 
 # Create some title
