@@ -67,7 +67,7 @@ def check_retractions(bibtex):
         if doi in retracted_dict:
             contains_no_retractions = False
             st.write("#")
-            st.markdown(f'<p class = "retracted">RETRACTED: {doi}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class = "retracted">RETRACTED FILE DETECTED: {doi}</p>', unsafe_allow_html=True)
 
     if contains_no_retractions == True:
         st.write("#")
@@ -88,7 +88,7 @@ local_css("style.css")
 # Header
 st.markdown('''
 <h1 style="color: white; text-align: center">Retraction Check</h1>
-<h2 style="font-size: 1.5em; color: white; text-align: center">Check whether your references contain retracted papers</h2>
+<h2 style="font-size: 1.5em; color: white; text-align: center">Check whether your references contain any retracted papers</h2>
 ''', unsafe_allow_html=True)
 
 
