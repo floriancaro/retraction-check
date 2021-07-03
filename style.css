@@ -1,0 +1,30 @@
+body {
+    color: #fff;
+    background-color: #4F8BF9;
+}
+
+iframe {
+  margin: auto;
+  padding: 50px 0;
+}
+
+h2 {
+  color: white;
+}
+
+/*.stApp {
+  background-color: #439995;
+}
+
+.block-container {
+  background-color: black;
+} */
+
+.bib-content {
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.retracted {
+  color: red;
+}
